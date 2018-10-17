@@ -3,13 +3,15 @@
 
 pairs = [(2, 3), (4, 0), (9, 3)]
 counter = []
-try:
-    for item in pairs:
+
+for item in pairs:
+    try:
         if not item[0] / item[1]:
             raise Exception
         else:
             counter.append(item)
             print(counter)
 
-except Exception:
-    print("Devision can't be done", item)
+    except Exception:
+        print("Devision can't be done", item)
+print('There are {} good pairs:'.format(len(counter)), counter)
